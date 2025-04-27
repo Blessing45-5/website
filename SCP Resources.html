@@ -1,0 +1,458 @@
+
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP Resources | SCP Africa</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            height: 200px;
+        }
+        .logo{
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .logo span {
+            color: red;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #a45c85;
+        }
+        .resources-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .resource-item {
+            background: #f3f3f3;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .resource-item h2 {
+            color: #a45c85;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        .language-selector select {
+            padding: 5px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            color: #a45c85;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: white;
+            list-style: none;
+            padding: 10px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: darkred;
+        }
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: darkred; 
+            font-weight: lighter;
+        }
+        h3 {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: grey;
+            font-weight: lighter;
+        }
+        h4 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: darkred
+        }
+        h5 {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: grey;
+            font-weight: lighter;
+        }
+        h6 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: gray;
+            font-weight: lighter;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: gray;
+            font-weight: lighter;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            text-align: center;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 20px auto;
+            padding: 12px;
+            background-color: #a43c3c;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #871f1f;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://images.squarespace-cdn.com/content/v1/65bd8cdbe982a45af1d1aa16/d7ebb06c-2053-4909-96b2-aec5275cefa9/Saturation.jpg" alt="SCP Africa Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">SCP Story</a>
+                    <ul class="dropdown">
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#journey">SCP Journey</a></li>
+                    </ul>
+                </li>
+                <li><a href="bible study groups.html">Bible Study Groups</a></li>
+                <li><a href="SCP Resources.html">SCP Resources</a></li>
+                <li><a href="Start the Journey.html">Start the Journey</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <select>
+                <option>English</option>
+                <option>Swahili</option>
+            </select>
+        </div>
+        </nav>
+    </header>
+
+    
+    <div class="container">
+        <h3>RESOURCES</h3>
+        <h2 id="resources">Blog Posts</h2>
+        <p>We have a collective community of contributors passionate about and dedicated to provoking your thinking on topics of church, leadership, and the mission of the gospel. Our writers bring together a wealth of knowledge, experiences, and perspectives, resulting in a rich and engaging collection of posts. We pray these will be used as resources to inspire and empower individuals in their spiritual journeys, equip leaders to navigate the complexities of leading a church, and ultimately contribute to the greater mission of spreading the transformative message of the gospel.</p>
+
+        <a href="#" class="button">CLICK HERE</a>
+
+        <h5>AUDIO SERIES</h5>
+        <H4>You Are Invited To A Free Offer For Your Churches And Leaders</H4>
+        <p>Like few other generations before us, we live in a pornographic world. We have a generation who have been so conditioned by the pornographic environment, that the deepest parts of their beings are pornographic. We are wounded and in need of healing. 
+
+
+            God offers to heal us. Healing can come to people who choose it. This audio series and the book that accompanies is for those of us who are in Jesus Christ and want Him to heal us. For us, over the extent of our lifetimes, we can experience much more healing of our deformities than we have too often realized. 
+            
+            Six Keys to Maturing Your Faith</p>
+
+        <a href="#" class="button">ACCESS NOW</a>
+
+        <h5>DOWNLOADS</h5>
+        <h2>SCP Resources</h2>
+        <p>Pastor, church planter, communicator, missionary, missiologist and author Dwight Smith has lived a full life.  But the salient concept that has taken shape throughout his years of ministry is saturation church planting.  Many missionaries and ministries today are embracing the concept.  But what exactly is saturation church planting and where did it come from?  These books unpack the concepts and convictions of his life in cooperation with God on this mission.
+
+                ​
+                
+            We have made a number of resources available to you free of charge and recommend that you begin by first reading Renovation: Divine Design in the Life of the Church and secondly, The Journey: A coaching Manual for Church Leadership Teams.
+            
+            For additional resources in English, </p>
+
+        <a href="#" class="button">CLICK HERE</a>
+
+        <h2>Renovation</h2>
+        <p>In recent years the church has forgotten the conviction of thousands of Christ followers, across two thousand years, who gave themselves to completing the last sending command of Jesus: “In your going, make disciples of all the peoples of the world” (Matt. 28:19). Instead, in an effort to draw people to Christ, much of the Western church today has sought to become relevant through golden-tongued leaders, star-quality worship bands, large-scale buildings, and myriad social programs. God is on a mission to redeem lost men and women to Himself and restore them to relationship with and representation of Him, and we, the already redeemed ones, are servants in this mission. The primary need of the church in our day is not relevancy; rather, it is to provide people accessibility to the gospel through our day-to-day lives. God’s ultimate design for the church is simply for every member of Christ’s church to live the gospel in whatever places God calls us, thus saturating every home, workplace, community, city, and nation with the gospel message through the people of God.</p>z
+    </div>
+
+    <!-- Book Section -->
+<div class="book-section">
+    <div class="book-cover">
+      <img src="https://static.wixstatic.com/media/f777f3_3705a5a35c71470594c7be13c4ab45cf~mv2.jpg/v1/fill/w_238,h_368,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/31lcUxwdZ%2BL.jpg" alt="Renovation Book">
+    </div>
+    <div class="book-links">
+      <ul>
+        <li><a href="https://www.scpasia.org/_files/ugd/0e86fc_d1e384f8e70d423eac0f75ae4f7d0cc3.pdf">Renovation English PDF</a><span>&#8595;</span></li>
+      </ul>
+    </div>
+  </div>
+  
+  <h4 id="journey">The Journey</h4>
+  <p>Maturing a body of Christians so that they live the Gospel and tell the Gospel, is never easy. Seeing this then multiply across the face of a geography until every man, woman and child has had the opportunity to be reconciled to God, is even more challenging. Both challenges take time, focus and a pathway to walk that has proven to be effective.
+
+    ​
+    
+    The Journey is a 25 year old pathway that we have used in multiple nations around the world and in thousands of local church contexts. It is not a strategy as much as it is a guide that leads churches down a pathway of thinking, learning and acting in ways that will be appropriate to their context. The Journey helps to produce a clear direction in alignment with God’s movement in a region.
+    
+    ​
+    
+    The results that we have seen are that local churches mobilize themselves in maturing believers, adding new believers, multiplying local churches, and, ultimately inspiring and cooperating with other like minded churches to fully evangelize their neighborhood, region, state and nation.</p>
+
+     <!-- Book Section2 -->
+     <div class="book-section2">
+        <div class="book-cover">
+          <img src="https://static.wixstatic.com/media/0e86fc_008221bd9fac4e4594cc248e17ab0fa1~mv2.jpeg/v1/fill/w_285,h_368,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/The%20Journey%20CV%20front.jpeg" alt="Renovation Book">
+        </div>
+        <div class="book-links">
+          <ul>
+            <li><a href="https://www.scpasia.org/_files/ugd/0e86fc_4d3ec0dff57c41159ef2504c5a7084d9.pdf">Journey English PDF</a><span>&#8595;</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="picture">
+        <img src="https://c8.alamy.com/comp/BDNTBB/the-very-busy-kejetia-market-in-central-kumasi-ghana-west-africa-picture-BDNTBB.jpg" alt="African people">
+      </div>
+
+  <!-- CSS -->
+  <style>
+    .book-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 60px;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+  
+    .book-cover img {
+      width: 200px;
+      height: auto;
+      border-radius: 4px;
+    }
+  
+    .book-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+  
+    .book-links li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 260px;
+      margin-bottom: 12px;
+    }
+  
+    .book-links a {
+      color: #003366;
+      text-decoration: none;
+    }
+  
+    .book-links span {
+      font-size: 18px;
+      color: #003366;
+    }
+  
+    .book-links a:hover {
+      text-decoration: underline;
+    }
+    .book-section2 {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 60px;
+      margin: 40px auto;
+      max-width: 1000px;
+
+    }
+  
+    .book-cover img {
+      width: 200px;
+      height: auto;
+      border-radius: 4px;
+    }
+  
+    .book-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+  
+    .book-links li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 260px;
+      margin-bottom: 12px;
+    }
+  
+    .book-links a {
+      color: #003366;
+      text-decoration: none;
+    }
+  
+    .book-links span {
+      font-size: 18px;
+      color: #003366;
+    }
+  
+    .book-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="social">
+            <img src="data:image/png;base64,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" alt="SCP Logo" class="scp-logo">
+            <p>Social</p>
+            <a href="#">Facebook</a>
+        </div>
+        <div class="inquiries">
+            <h3>Inquiries</h3>
+            <p>For any inquiries, questions, or</p>
+            <p>commendations, please complete</p>
+            <p>the contact form or email:</p>
+            <p><a href="mailto:atanguskip@gmail.com">atanguskip@gmail.com</a></p>
+            <p>More Information at:</p>
+            <p><a href="https://dwightpaulsmith.com">dwightpaulsmith.com</a></p>
+        </div>
+        <div class="contact-button">
+            <a href="contact.html" class="btn">CONTACT US</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 SCPAFRICA. ALL RIGHTS RESERVED.</p>
+        <a href="#top" class="go-up">Go Up</a>
+    </div>
+</footer>
+<style>
+
+        footer {
+            background: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .scp-logo {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .social, .inquiries, .contact-button {
+            text-align: left;
+
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn {
+            background: darkred;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #871f1f;
+            transform: scale(1.05);
+        }
+        .footer-bottom {
+            margin-top: 20px;
+        }
+        .go-up {
+            display: block;
+            margin-top: 10px;
+            color: darkred;
+            text-decoration: none;
+        }
+</style>
+
+</body>
+</html>

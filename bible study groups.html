@@ -1,0 +1,340 @@
+
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Study Groups | SCP Africa</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo img {
+            height: 150px;
+        }
+        .map {
+            max-width: 80%;
+            height: auto;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #a45c85;
+        }
+        .content-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .study-group {
+            background: #f3f3f3;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .study-group h2 {
+            color: #a45c85;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: darkred;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: gray;
+            font-weight: lighter;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            text-align: center;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .contact-button {
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            background-color: darkred;
+            font-weight: bold;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+        .contact-btn:hover {
+            background-color: #944b5c;
+        }
+    .logo{
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .logo span {
+            color: red;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        .language-selector select {
+            padding: 5px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            color: #a45c85;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: white;
+            list-style: none;
+            padding: 10px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+        .swiper-slide img {
+      height: 300px;
+      object-fit: cover;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="data:image/png;base64,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" alt="SCP Africa Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">HOME</a>
+                    <ul class="dropdown">
+                        <li><a href="#">SCP DNA</a></li>
+                        <li><a href="#">SCP Journey</a></li>
+                    </ul>
+                </li>
+                <li><a href="bible study groups.html">Bible Study Groups</a></li>
+                <li><a href="SCP Resources.html">SCP Resources</a></li>
+                <li><a href="Start the Journey.html">Start the Journey</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <select>
+                <option>English</option>
+                <option>Swahili</option>
+            </select>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="subtitle">BSG</h1>
+        <h1>Bible Study Groups</h1>
+        <P>We want to help you build your people in knowing and walking daily with our Heavenly Father. The most effective way to do that is through time with Him in His word.</P>
+        <p>For this, you don’t need a preacher. You don’t need a theological book. You don’t even need to be able to read. Across thousands of years, God our Father through the Holy Spirit has superintended His words to be written by tens of authors.....for people like you.</p>
+        <p>We have a free resource for you to simply download and use with your people. It will lead them in encountering God regularly in His word. Over 26 books of the Bible are provided and will help your people over several years develop their own time with God on their own.</p>
+        <p>Additionally, you can use it as a resource for the house groups and discipleship groups you are starting. To grow your people in their faith, and in telling their grace story to those around them.</p>
+        <p>The material is available in the following Indian languages. If it not in yours, talk with us and we will help it be translated. Additionally, if your people cannot read, we will do everything we can to get to you preloaded Bibles in your language.</p>
+        <p>All you need to do is tap on the following link and someone will begin the process of getting you access.</p>
+    </div>
+    <div class="button-container">
+        <button class="contact-button">CONTACT US</button>
+    </div>
+    
+    <body class="bg-white text-black">
+        <div class="max-w-7xl mx-auto py-10 px-4">
+          <h1 class="text-3xl font-bold mb-6">Bible Study Groups</h1>
+          
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://t3.ftcdn.net/jpg/00/23/94/44/360_F_23944448_ie6yE4WB3C37qewpEmDdCxNduWGPRnNz.jpg" alt="Group 1" class="rounded shadow">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://media.istockphoto.com/id/155096043/photo/young-adults-in-a-bible-study.jpg?s=612x612&w=0&k=20&c=5YRmWcO4YVGWgYnjwLEH-0LEFPtootDpXpgKGbThCQ4=" alt="Group 2" class="rounded shadow">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://t3.ftcdn.net/jpg/03/30/49/18/360_F_330491897_BD708CO74gKo7bgDsudZARLZPYr8sbKu.jpg" alt="Group 3" class="rounded shadow">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeyleZxVTsAwqhfYZ1gUoRXhB3pfDwaEItkQ&s" alt="Group 4" class="rounded shadow">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAzVzwZHMov9BAhJ7arYEZWvfmNmvyYOZpVw&s" alt="Group 5" class="rounded shadow">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6AGRApwhJlhizS5UzGeSp_PVKdM63ctCrBg&s" alt="Group 6" class="rounded shadow">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://c8.alamy.com/comp/BKJ4FT/men-in-a-home-bible-study-BKJ4FT.jpg" alt="Group 7" class="rounded shadow">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/african-american-male-friends-standing-park-discussing-bible_181624-21220.jpg?semt=ais_hybrid&w=740" alt="Group 8" class="rounded shadow">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTseTRjBom-0MM7eDrkNXVAkEkQLlizdooWQ&s" alt="Group 9" class="rounded shadow">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.shutterstock.com/image-photo/young-africanamerican-male-sitting-on-600nw-1678441417.jpg" alt="Group 10" class="rounded shadow">
+              </div>
+            </div>
+            
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      
+    <footer>
+        <footer>
+            <div class="footer-container">
+                <div class="social">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAh1BMVEX///8xPE+TlZiPkZT5+vorNkuCh5AsOEzFxseLj5fk5eYnM0gXJz/Cw8VZX2yLjZANITsGHTnx8fKusbamqKqjpauztLYcK0LW19dRWmhkaXUhL0W3ur8AACQAACenq7E6RFZ5fojMztGYnKMAFzVKUmFudH8AETJCS1ydn6GChIgAAB8ABi4lxNdrAAAPnUlEQVR4nN2dabeiuhKGBQORAIpxYDxHRHFr3/7/v+9CGEwggaCg7POu1f1hL4Q8ZKpUqsJiMaHw6R5CpRYM7yc85fOmE0AHZUuhEJytckDg2yUbLIAud0tTWtKs++WX4QDvkPJQCpz04P0eHJAYvmXyUXKZlq8mvwMHrPQ07EAhOGGqr34BTnK+h4IGxjS28H5Ovl3WHiU3RYP9KLmgptzmjJMErimJQnBMN5gpDkj8v6E8SaHwrz/DoQDZwban1/NlbgMbfbv0jJC9tgbXSl071npGOGh3c19GITjubTcPHHS4aW+hEBztdvg+jncJ3kcpcIKL91UUZPjakMG4S9DUfON7tYMv8VgkFU98+c6CB+mhOyoKwXFD/eO1A5B+tcYmKWRd9Y8ueLCnu+40KLlcV/c+1dpwYkBr9AZGK7u9kXwCB9t6PC1KgRPr9tQ4ODrH43d7Lo4bn6MpcfDuFocfQSE4YXzbTYUDokAZd17pxTGVIJpiZAO7bLL/JEmhzCzYjY2Dd/FWYmU/hbRtPGZjA+gQXz/avljBazyWHxSgUyxy6H1KmhWfRsAB3sn/NkqB45/e9YN6F9/9QrfnyXT9txY8ieH3+SY/KTP0jVddU8k5lfFNflJamL7kB030kVde4yhbv+lDcbybOUeUXNA0bwP6DkjWfydcrrwv9+9a2g+K0okWkePJSmUX154y0xb2FFRkW5o9+4rJqsaWYwGX3wBzkes0wJ/RRCmS6cvBIPjsMpBI0/L/X38yrDQCRX1LuRFg5ZTXW1vHzTiU2E+zH2vW9RWLM9xeLdfM3keuMLvlSNXurKRgLjmM6fxYRpTgZ2ViLzr4P84QH4BpXa/BKfLqu+AkOqx/tq7svmeHthcpmDTM2sNZsPb2jBTKFSVrmgF/iYgOa+1tHDOVgvkXrrv2SoB9i/ubiqalRsdUkL0TEY5W97CybbIyNbOwtH5kWDylb9snw+kzp8N73+6EZ9y5r8Q3LoZIeqbzLQjWd80M/5UZARIJoxRf7l07TDC89c9pwA62nHoxqCt4whghzz5dzveDBIzc+G2vxaaoBi9S4ybSnfZ7MPp/R4RlXrqsEiENVA6SJi1u2xrSMOMqERgKEEpaGpmw0aT5EszCvnPHo1Af4ETBzZb2LZjFgTe6wvUg96O3NucBs7i1GxqEA/tlxL6R78F47apx9YH3wLo5D5jFuTXbbAfvFUcxnAcM+rdZMbfB98BnbR4wi7TRa64vOFCjmTSzxYkdWc30Bd82SuE8YJDDDAGOjL3UEj0EfBMGsF6p8CV76TQTmMWBtnxh+tJ+HZoLTER3mvD22ubjTAYA1vvpyJrLDVGWxNQw2XpIXEZEW5vb6LUnUCuBaWFQdNHPl0g0seOUmvJc0foS26fDSRw8snM+A4N0zXJdSxNtieDgadHAWHAROseW4yjCTS97+xEYcCn9ZJbOf69Yf8Jogn2GbAmW3wSGgaB+vb8fgUGBWb11/msF1FrR9PmFRfeiKUIomFMpE08Ig1Gm9yI1krp/X4/cC8Dl2d7NNR8mqlqRKViEAgmYy08YupYyZBnbKkf93p0T9zbDYG78C6RgSEmg87/Xa+c5JwrmEBmYXQ0j6jT/yMJkE/Oafb40igzM4cMwypWuGjQk9nGGMC41M6P9csDKdoYw4XNITB7LzYDV4BxhTtWfbHWpbmz5XjNjGHBcqqq6fMh3mvnC4H3Okkm+08wWBj1KlgGdZq4wYFeyqMujdKeZLcxRrWAe/yEYdSM9AkTu/GGkO83Tap4tzJJvznOE6oXkt2EMEYy6lIVZXNzZw2ykRwCv2rmcMUy704jGhFMZizRfmGXLwQVELi9Qbih9DwbgbhhVbf4CBwKYBVoTGuuCuNLdiWGw7fXAtGaa5B8RzMKLcxp4Dzi6BZR7dhIYfHygHphl03F06HAUrAoaM+SIDuWeAgYcN70warOLnLenhVCru1TMdj/MesVvq0InID5u1H6YPdudse+yXg9WiS9D0wujxP6aK9EuAMoXLf0wD/a5SQy1rlWOFE0/jJJHvnH0vAcDkzyeRa1hrLxRPZcAROxMs8uK0hn0iNbtcKoXYHpFweCywA2Yn7xz1+tMHowBhW7v+pLetI0xYQDa/1mqHBiLRBokKiMmHw0HeUF74lF3faGZY8AUkYAoUjf1qy9hnDxo0zTJtimImIphnRqer2X3EQ2clZJ1d1rzKDDEM25vqMIWMBftfr+nQRH6iQ5MxeyZxxXxK7AvVBjpnUm048Gs6BdfwHhRZNtJ8YBGxajsiuZCNlC0tG8bH+y6RrVJYehS2GyPWTLB5/hcvHBXsD1GKbmJQ84/BIMjtQHDXFDvj5n9SdHYENJ8BAYk7Kic+2eYp9XRlppoi5W+20FEMxVMUlk9XrI6PtSmNmznONX7Y+ZdwnETCQo3EYy6pNViUf8wD8PGs1e7Mkk2nsOtm6lgulVUDKiKjW5UdKJ1k6BJuPPnV2CWZJIBq+rRHh29pmwNiZa24mUlfANmWewCJPV5fDZbMFfm+KeIUzcCGDAhzLI4kBNcrmWkC+2TIArP/TRg107mFME07z8ezFItTuO0lW3pb8Hn5qwujJShi3hphQFzYPJ4qOlgynrJnXvhuegcqJWhAE2/Pz4RBU2aFgyKjnhCmOWjOLsBBG4d6pJwQvo1pT901I4bv2vAoGM21EwHs/yzL0eq/K1CrRihuf0TOuveIdpo5GoxMOiRmfHTwSw3tZUTkCl/SywxrPOzf8NtX1PDPkvzhMHeg6xIJoN5HOt5pbTjixgyLMr+1dxDz4yzY39ZweDMFixKMxLM05TJ//7YH+vzwnBUTXimn/9NnDAP+460AylTNQXME2UsmMexUrY+W3moDhkFiV57doqk+ojfyojCnoNuWZOzgPGoJe8oMEsb4FwAsL0YJJeUOmmNuKBaaV+0XL87IPbKg1HHhuE9GdtG6tANwzLyptLpcwnvHW7bxUKn59tirP8EDE4ut3tjWZUnVeCeg+S0Tg+UR1frJ2BAni+ur++w5cWDLl4kvU9yOmgA/SomhdkFQbBO4/xsAdPk5kU7yeLQf8bET4c1QKeNTgpjXDVT05SOAxKswyKQOGwgFI8C9Hg2LUzvSzeDxVriTF++Q42MlAnVdr8ME64XiSJRNe0tL4A8cvw1igfBVGdpCI/UeB3GVLI3vit6k8tVBRoy+coYJdFj+Sefcmn7rB8mvt/vcRznRm6+LZM9wLIsx6Fq7mUYqO3yd5wHYUDNjniqIv21e93QsLc6PnJDaZOvjOjEhl4Y7ZYkycouFEX1I6k0vJdh3OJ1o2ylCUNB/64eYxUHKWej/P6hllZkfswGndjQC2MKIhaoiPNXYdxqqe+tQxjyVy81TGGqANqfSGAA5XOTgOE/Bb8NE67rhX4Um30w5VYi7eclAYXtLI2uZiZIS3gbRoupyeME3T4YJ2+TRfjt7GAgZAxIoxfGyn2Db8KUKSfsCR8jwGhsX0TBB2FOR0rofZhWJkvbUQbGh9EK59Yf2qufvA1j3nt8ltkEH00HQ5WUbOG/BQPdztUwyCb4fbHt8QtgOpPDEdmdyib48WHMCWAswdyVk9j1tPg7YCxh8IK3obbZJoDRimFnRBhTHCPDhNdMUTNjw2iC7NGilT0mrZmxYSDciVmYaKH5w0Cte8cS2PVt5g8jymGtheviTgETjAkD0979PaxW+U8zh4GuxOGTaEPD1LeYHcxV6liYpCgNSX6I6kUxZz0judJcRJV7vbSaR4FxhCHyrIoSk6D0pI532LZXmoUPoB/GK91RUCnWUC0YKq5ZFiaUPHu2fP8bstKottVN0tvqDkVo8+RVfGue1MDAkOjJaqOx3BHGI8BofWb/U2Tu3JB7rNJQI75qchwAoh9CInAwHWB995rXqGQi8FLX1LSwDDZmL8h/4v0MhNFiyeOaydOzGihj0uyzH8dpUHyj2N7QDyF1RW3vFEdTILV5TX4q/9r3g/KzXzZdUrJnTDmspWCgOeSAG7BS64whnERRGeiJVUbEPUufO2OumhdVKaHY85KqYTD9bp//dagTMOwPv2Ro8m7TyoE+Ms8gLzWhPcZOPkjgB9OMWm3bY2ExW1AZGGGyh0jEgN6z0ZFM+1CX5Mhf5qwmkv0EWOR968bMTcjhw9TxRhIw/UG+LZGmv6cMBsQkRpSDGdsvSfQtWNEdq5kRBtjQ1yKKl+7a/TBmp6nMl5ePoEv1mCCMkWezjUet+vad3vAtAwsaEQl7qrWixm3Id0voI8H6YZyh50ESFUPXclOoxUJaGWJGf6iQuakZq7t55C8EI7RSNzzQ0xAYV3Lmb6pZKE4D2dFdphwBADOAFzib3EXWfiMqKac+AMaMBwzKtHCradHvlAwOjSCC8Jz/EQl/1RIZ3ekQ0R4Ys2ud3K1mC6dFKqZ1jmZIzJdjV5XSxSQZCZEiDQOhdFZ2W564GKRXt044dXadP2uK7Pkwh4J2wkBT/vTkthpTy/P+ZRpIa4sVxl0/a6gIr2ZPSu6EkUi86JKgxZQm17m9Ub0lza81oHFvQhYEjYN0u2Co7bHXxOs2xT5znnXX3vw2/eJnai9NOf80Ij07YAaZyny12/+mtLcSbjyUWaxmMS8FgblLwYICNg5ZDOPAzvgqOa2axSjfj8eP7aiPqOuepQqjbIGNRvSGGGY7ygF70eZZBPVRnduIzgK3fG3Trh6itrasjD5waMWHi2D0YceNiwQe+fyd/aMjPb2bMPmsjr5H9l5tt7bl5rKvbrPTml9+ENfMQLNfJLQnsZ7J85O9IOr4xoHyjFPNFnanR2nMFAaN+tjZ1X3AwWx9xaKAQQktYvCN9ulw3Djj1DNgZyxUeHsaHZnFndjR8bjb7cgLeZ64iAzOdy0Fu+t4pHrJxaIcepJPM5qUDYkuwl+ZNwKiG++F8GHAmJ+lfgbhYlv3lf4PBGlK0D0pJGd+cjEfBo/6Xd0i9sA7nVNF8js4prIWfgsXRIHoizzamXP2wdjf1/bOaRxaYTjgI1KaawW7VlsHyA6uljhgz7Sa2jovHjYs1smUiBhsKnQs0zdOdjYkeUk2DhwMX7OuEoGUlKDywpq/R8B46TNLEJrW9rq18qC/7dVxB38LEmrivfHXhdufZxgE9eIPq/yrkdVO5/qARCcNvy3vc985rwTD0Wb+poYkXI6j7fidvxJoGuxTy5mi81fCwUdpnGCSzl8JyUTbj6VQkCs9mpL4Y59y7gyMGUVgBz9Eo8H+MzDeFX7NEngBRiaV/10hjrdsApkSqe8jyFt/oGrguw4/WSUf6DXa1J2/1u6nvzTv6We6mb+l1nEII8s9v1Ss/wO1uoYzwiNojwAAAABJRU5ErkJggg==" alt="SCP Logo" class="scp-logo">
+                    <p>Social</p>
+                    <a href="#">Facebook</a>
+                </div>
+                <div class="inquiries">
+                    <h3>Inquiries</h3>
+                    <p>For any inquiries, questions, or</p>
+                    <p>commendations, please complete</p>
+                    <p>the contact form or email:</p>
+                    <p><a href="mailto:atanguskip@gmail.com">atanguskip@gmail.com</a></p>
+                    <p>More Information at:</p>
+                    <p><a href="https://dwightpaulsmith.com">dwightpaulsmith.com</a></p>
+                </div>
+                <div class="contact-button">
+                    <a href="contact.html" class="btn">CONTACT US</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SCPASIA. ALL RIGHTS RESERVED.</p>
+                <a href="#top" class="go-up">Go Up</a>
+            </div>
+        </footer><style>
+            footer {
+                background: #f8f8f8;
+                padding: 20px;
+                text-align: center;
+            }
+            .footer-container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .scp-logo {
+                width: 50px;
+                margin-bottom: 10px;
+            }
+            .social, .inquiries, .contact-button {
+                text-align: left;
+    
+                color: black;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+            .btn {
+                background: darkred;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+            .footer-bottom {
+                margin-top: 20px;
+            }
+            .go-up {
+                display: block;
+                margin-top: 10px;
+                color: darkred;
+                text-decoration: none;
+                align-content: flex-end;
+            }
+        </style>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3
+        },
+        768: {
+          slidesPerView: 2
+        },
+        480: {
+            slidesPerView: 1
+        }
+      }
+    });
+  </script>
+
+    </body>
+    </html>
+</body>
+</html>
